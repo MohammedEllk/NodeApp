@@ -1,0 +1,29 @@
+{
+  "name": "nodeapp",
+  "version": "1.0.0",
+  "description": "node express knex objection js application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohammedEllk/NodeApp.git"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "express",
+    "knex",
+    "objection"
+  ],
+  "author": "7m!dane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MohammedEllk/NodeApp/issues"
+  },
+  "homepage": "https://github.com/MohammedEllk/NodeApp#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
