@@ -1,3 +1,15 @@
-<div *ngFor="let contact of contacts">
-      {{contact.nom}},{{contact.prenom}},{{contact.description}} 
+<div *ngFor="let contact of contacts"class="card" style="width: 18rem;display:inline">
+<div class="card-body">
+<h5 class="card-title">{{contact.nom}}</h5>
+<p class="card-text">{{contact.pays}}</p>
+</div>
+<ul class="list-group list-group-flush">
+<li class="list-group-item">{{contact.nom}}</li>
+<li class="list-group-item">{{contact.prenom}}</li>
+<li class="list-group-item">{{contact.pays}}</li>
+</ul>
+<div class="card-body">
+<a href="#" class="card-link">Card link</a>
+<a href="#" class="card-link">Another link</a>
+</div>
 </div>
