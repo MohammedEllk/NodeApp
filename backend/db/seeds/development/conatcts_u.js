@@ -5,9 +5,9 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('contacts').insert([
-        {id: 1, nom: 'rowValue1',prenom:'pren1',pays:'what1'},
-        {id: 2, nom: 'rowValue2',prenom:'pren2',pays:'what2'},
-        {id: 3, nom: 'rowValue3',prenom:'pren3',pays:'what3'}
+        {id: 4, nom: 'rowValue1ss',prenom:'pren1vv',pays:'what1dd'},
+        {id: 5, nom: 'rowValue2ss',prenom:'pren2vv',pays:'what2dd'},
+        {id: 6, nom: 'rowValue3ss',prenom:'pren3vv',pays:'what3dd'}
       ]);
     });
 };
