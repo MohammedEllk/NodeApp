@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-const baseUrl ="http://127.0.0.1:3000/api/contact";
+const baseUrl ="http://127.0.0.1:3000/api/contacts";
 @Injectable({
   providedIn: 'root'
 })

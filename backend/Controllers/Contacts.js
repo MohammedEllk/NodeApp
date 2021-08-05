@@ -4,16 +4,21 @@ const ContactService = require('../Services/ContactService');
 const Services = new ContactService();
 const router = express.Router();
 
-router.post('/', async function(req, res, next) {
+
+
+router.post('/api/contacts',async function(req, res, next) {
+    
+    console.log(req.body);
     await Services.create(req.body).then((data) => {
-        console.log(data, "contact data");
-        res.send({"success": "details register successfully"});
+        console.log("test");
+        res.send({"success": "contact added successfully"});
     }).catch((err) => {
         res.send(err);
     })
 });
 router.get('/', async function(req, res, next) {
     const contacts = await Services.findAll();
+    console.log("fsff");
     console.log(contacts, "hello contacts");
     res.send(contacts);
 });

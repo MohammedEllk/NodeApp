@@ -7,7 +7,9 @@ module.exports = class ContactService {
     }
 
     async create(details) {
-        return await Contacts.query().insertGraph(details);
+        
+        
+        return await Contacts.query().insertAndFetch(details);
     }
 
     async findById(ContactId) {

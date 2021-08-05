@@ -1,6 +1,10 @@
 const express = require('express');
 
 const app = express();
+const cors = require('cors');
+app.use(cors());
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
 
 //const Contact = require('./Controllers/Contacts')
 //const Contact  = require('./models/Contact');
@@ -19,6 +23,7 @@ app.use((req, res, next) => {
 */
 app.use('/api/contacts', require('./Controllers/Contacts').router);
 app.use('/api/contacts/:id', require('./Controllers/Contacts').router);
+app.post('/api/contacts', require('./Controllers/Contacts').router);
 
 
 module.exports = app;

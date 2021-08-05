@@ -1,1 +1,25 @@
-<p>newformcontact works!</p>
+<div class="col-sm-8 col-sm-offset-2">
+    <form method="POST" enctype="application/json" [formGroup]="ContactForm" (ngSubmit)="onSubmitForm()">
+        <p>{{ContactForm?.value|json}}</p>
+        <div class="form-group">
+            <label for="id">Id</label>
+            <input type="text" id="id" class="form-control" formControlName="id"> 
+        </div>
+        <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" class="form-control" formControlName="nom"> 
+        </div>
+        <div class="form-group">
+            <label for="prenom">Prenom</label>
+            <input type="text" id="prenom" class="form-control" formControlName="prenom"> 
+        </div>
+        <div class="form-group">
+            <label for="pays">Pays</label>
+            <input type="text" id="pays" class="form-control" formControlName="pays"> 
+        </div>
+        
+       
+       
+        <button type="submit" class="btn btn-primary">Soumettre</button>
+    </form>
+</div>
