@@ -1,37 +1,52 @@
+// Update with your config settings.
+const Dotenv = require('dotenv');
+Dotenv.config({ path: `${__dirname}/.env` });
+console.log(process.env.DB_HOST);
+
 module.exports = {
-    test: {
-      client: 'pg',
-      connection: 'postgres://localhost/test_db',
-      migrations: {
-        directory: __dirname + '/db/migrations'
-      },
-      seeds: {
-        directory: __dirname + '/db/seeds/test'
-      }
+
+  development: {
+    client: 'pg',
+    connection: {
+      database: process.env.DB_NAME,
+      user:     process.env.DB_USER,
+      password: process.env.DB_PASS
+    }
+  },
+
+  staging: {
+    client: 'pg',
+    connection: {
+      database: process.env.DB_NAME,
+      user:     process.env.DB_USER,
+      password: process.env.DB_PASS
     },
-    development: {
-      client: 'pg',
-      connection: {
-      host : 'localhost',
-      user : 'postgres',
-      password : '0000',
-      database : 'nodejs_angular'
+    pool: {
+      min: 2,
+      max: 10
     },
-      migrations: {
-        directory: __dirname + '/db/migrations'
-      },
-      seeds: {
-        directory: __dirname + '/db/seeds/development'
-      }
+    migrations: {
+      tableName: 'knex_migrations',
+      directory: './db/migrations',
+    }
+  },
+
+  production: {
+    client: 'pg',
+    // connection: {
+    //   database: process.env.DB_NAME,
+    //   user:     process.env.DB_USER,
+    //   password: process.env.DB_PASS
+    // },
+    connection: process.env.DATABASE_URL,
+    pool: {
+      min: 2,
+      max: 10
     },
-    production: {
-      client: 'pg',
-      connection: process.env.DATABASE_URL,
-      migrations: {
-        directory: __dirname + '/db/migrations'
-      },
-      seeds: {
-        directory: __dirname + '/db/seeds/production'
-      }
+    migrations: {
+      tableName: 'knex_migrations',
+      directory: './migrations',
     }
   }
+
+};

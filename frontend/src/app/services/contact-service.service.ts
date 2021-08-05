@@ -12,15 +12,15 @@ export class ContactServiceService {
   getAll(): Observable<any> {
     return this.http.get(baseUrl);
   }
- /** 
-  get(id): Observable<any> {
+
+  get(id:any): Observable<any> {
     return this.http.get(`${baseUrl}/${id}`);
   }
 
-  create(data): Observable<any> {
+  create(data:any): Observable<any> {
     return this.http.post(baseUrl, data);
   }
-
+   /** 
   update(id, data): Observable<any> {
     return this.http.put(`${baseUrl}/${id}`, data);
   }

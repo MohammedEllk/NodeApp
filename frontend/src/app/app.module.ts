@@ -7,11 +7,13 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NewformcontactComponent } from './components/contact/newformcontact/newformcontact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactComponent
+    ContactComponent,
+    NewformcontactComponent,
   ],
   imports: [
     BrowserModule,
